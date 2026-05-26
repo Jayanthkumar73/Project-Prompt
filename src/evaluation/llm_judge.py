@@ -59,8 +59,8 @@ def evaluate_with_llm(reference: str, generated: str, model: str = "gemini-3.1-p
 	prompt = JUDGE_PROMPT.format(reference=reference, generated=generated)
 
 	try:
-		# Use simple generate API; adjust per installed SDK version
-		response = gen.generate(prompt=prompt, model=model)
+		model_client = gen.GenerativeModel(model_name=model)
+		response = model_client.generate_content(prompt)
 		text = getattr(response, "text", None) or response.output[0].content[0].text
 		result = json.loads(text)
 		return result
