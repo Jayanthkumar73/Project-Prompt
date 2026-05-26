@@ -1,0 +1,11 @@
+﻿# Replace placeholders with actual GitHub handles.
+
+/templates/ @aditya-handle
+/src/prompting/ @aditya-handle
+/src/execution/ @samatham-handle
+/src/evaluation/ @samatham-handle
+/src/statistics/ @khushi-handle
+/src/reporting/ @khushi-handle
+/src/api/ @khushi-handle
+/src/contracts/ @aditya-handle @samatham-handle @khushi-handle
+/docs/ @aditya-handle @samatham-handle @khushi-handle

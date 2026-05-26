@@ -1,0 +1,17 @@
+﻿experiment_name: baseline_pilot
+model_provider: openai
+model_name: gpt-4o-mini
+temperature: 0.7
+num_runs: 3
+seed: 42
+
+tasks:
+  - summarization
+techniques:
+  - zero_shot
+  - few_shot
+
+paths:
+  data_root: data
+  template_root: templates
+  output_root: results

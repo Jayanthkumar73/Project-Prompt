@@ -1,0 +1,7 @@
+﻿tasks:
+  summarization:
+    dataset: data/summarization/test_cases.json
+  code_generation:
+    dataset: data/code_generation/test_cases.json
+  reasoning:
+    dataset: data/reasoning/test_cases.json
