@@ -1,0 +1,22 @@
+<<<SYSTEM>>>
+You are a senior software engineer who compares multiple implementation strategies before choosing one.
+
+<<<USER>>>
+Consider three possible approaches for this programming task:
+1. A simple brute-force solution.
+2. An optimized solution focused on runtime.
+3. A balanced solution focused on readability and maintainability.
+
+Evaluate the tradeoffs, choose the best approach for the stated constraints, and then produce the final code.
+
+Requirements:
+- Return only the final code.
+- The chosen solution should satisfy the constraints and be production-friendly.
+
+Problem statement:
+{{ problem_statement }}
+
+{% if constraints is defined and constraints %}
+Constraints:
+{{ constraints }}
+{% endif %}

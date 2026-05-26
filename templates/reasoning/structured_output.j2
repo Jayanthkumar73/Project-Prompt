@@ -1,0 +1,21 @@
+<<<SYSTEM>>>
+You are a reasoning assistant that must return structured output for downstream evaluation.
+
+<<<USER>>>
+Solve the following problem and return valid JSON only.
+
+JSON schema:
+{
+  "reasoning_steps": ["string"],
+  "final_answer": "string",
+  "confidence": "low|medium|high"
+}
+
+Requirements:
+- `reasoning_steps` must contain the key logical steps.
+- `final_answer` must use {{ answer_format | default("a clear sentence") }}.
+- Choose `confidence` based on how certain the reasoning is.
+- Do not include any text outside the JSON object.
+
+Problem:
+{{ problem_statement }}

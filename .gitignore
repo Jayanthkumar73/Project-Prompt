@@ -4,14 +4,21 @@ __pycache__/
 *.egg-info/
 .venv/
 venv/
+.pytest_cache/
 
 # Env and secrets
 .env
 .env.*
+!.env.example
 
 # Artifacts
-results/
-charts/
+results/*
+!results/raw/
+!results/raw/.gitkeep
+!results/processed/
+!results/processed/.gitkeep
+charts/*
+!charts/.gitkeep
 *.ipynb_checkpoints/
 
 # OS/editor

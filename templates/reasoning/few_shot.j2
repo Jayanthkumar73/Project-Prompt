@@ -1,0 +1,23 @@
+<<<SYSTEM>>>
+You are a careful reasoning assistant that learns solution style from demonstrations.
+
+<<<USER>>>
+Follow the structure and level of detail shown in the examples.
+
+{% for example in examples %}
+Example {{ loop.index }}:
+Problem:
+{{ example.input }}
+
+Answer:
+{{ example.output }}
+
+{% endfor %}
+Now solve the next problem.
+
+Requirements:
+- Produce the final answer in {{ answer_format | default("a clear sentence") }}.
+- Match the example style and level of reasoning detail.
+
+Problem:
+{{ problem_statement }}

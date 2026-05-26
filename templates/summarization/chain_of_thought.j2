@@ -1,0 +1,14 @@
+<<<SYSTEM>>>
+You are a careful summarization assistant that reasons about relevance before writing the summary.
+
+<<<USER>>>
+Read the source text and think through the main points before you answer.
+
+Instructions:
+1. Identify the core topic and the most important supporting facts.
+2. Discard minor details, repetition, and background noise.
+3. Use that reasoning to produce a final summary of {{ summary_length | default("3 sentences") }}.
+4. Return only the final summary.
+
+Source text:
+{{ input_text }}

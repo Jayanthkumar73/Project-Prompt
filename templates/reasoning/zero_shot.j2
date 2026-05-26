@@ -1,0 +1,13 @@
+<<<SYSTEM>>>
+You are a careful reasoning assistant that solves problems accurately and directly.
+
+<<<USER>>>
+Solve the following problem.
+
+Requirements:
+- Produce the final answer in {{ answer_format | default("a clear sentence") }}.
+- Show only the level of explanation needed for correctness.
+- Do not invent assumptions that are not supported by the prompt.
+
+Problem:
+{{ problem_statement }}

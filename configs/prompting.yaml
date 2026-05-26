@@ -1,0 +1,27 @@
+tasks:
+  summarization:
+    description: Compare prompt strategies for article and report summarization.
+    required_variables:
+      - input_text
+  code_generation:
+    description: Compare prompt strategies for coding problem solving.
+    required_variables:
+      - problem_statement
+  reasoning:
+    description: Compare prompt strategies for structured logical reasoning.
+    required_variables:
+      - problem_statement
+
+techniques:
+  zero_shot:
+    description: Direct instruction without demonstrations.
+  few_shot:
+    description: Demonstration-based prompting with example pairs.
+  chain_of_thought:
+    description: Explicit step-by-step reasoning path.
+  tree_of_thought:
+    description: Multiple candidate reasoning paths before final selection.
+  role_based:
+    description: Persona-guided task framing.
+  structured_output:
+    description: Strict machine-readable output contract.

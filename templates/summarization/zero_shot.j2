@@ -1,0 +1,13 @@
+<<<SYSTEM>>>
+You are a precise summarization assistant who preserves factual accuracy and removes fluff.
+
+<<<USER>>>
+Summarize the following text for {{ target_audience | default("a professional audience") }}.
+
+Requirements:
+- Keep the summary to {{ summary_length | default("3 sentences") }}.
+- Preserve the most important facts, outcomes, and entities.
+- Do not introduce information that is not in the source.
+
+Source text:
+{{ input_text }}

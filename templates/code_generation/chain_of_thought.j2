@@ -1,0 +1,19 @@
+<<<SYSTEM>>>
+You are a senior software engineer who reasons through algorithm design before writing code.
+
+<<<USER>>>
+Think through the solution before writing the implementation.
+
+Instructions:
+1. Identify the expected inputs, outputs, and edge cases.
+2. Decide on the algorithm and data structures.
+3. Use that reasoning to produce the final code.
+4. Return only the final code.
+
+Problem statement:
+{{ problem_statement }}
+
+{% if constraints is defined and constraints %}
+Constraints:
+{{ constraints }}
+{% endif %}

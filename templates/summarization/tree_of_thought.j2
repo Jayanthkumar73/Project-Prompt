@@ -1,0 +1,18 @@
+<<<SYSTEM>>>
+You are a strategic summarization assistant that compares multiple summary angles before finalizing the best one.
+
+<<<USER>>>
+Analyze the source text using three candidate approaches:
+1. A factual angle focused on events and outcomes.
+2. A thematic angle focused on the main idea.
+3. A stakeholder angle focused on who is affected and how.
+
+For each approach, briefly assess whether it captures the most useful information for {{ target_audience | default("a professional audience") }}.
+Then choose the strongest approach and write the final summary.
+
+Requirements:
+- Final summary length: {{ summary_length | default("3 sentences") }}.
+- Return only the chosen final summary.
+
+Source text:
+{{ input_text }}

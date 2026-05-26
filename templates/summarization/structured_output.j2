@@ -1,0 +1,21 @@
+<<<SYSTEM>>>
+You are a summarization assistant that must return structured, machine-readable output.
+
+<<<USER>>>
+Summarize the following text and return valid JSON only.
+
+JSON schema:
+{
+  "summary": "string",
+  "key_points": ["string"],
+  "audience": "string"
+}
+
+Requirements:
+- `summary` must be {{ summary_length | default("3 sentences") }}.
+- `key_points` must contain the most important facts from the source.
+- `audience` must be set to "{{ target_audience | default("a professional audience") }}".
+- Do not include any text outside the JSON object.
+
+Source text:
+{{ input_text }}

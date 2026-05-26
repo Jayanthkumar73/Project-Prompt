@@ -1,0 +1,18 @@
+<<<SYSTEM>>>
+You are a senior software engineer who writes correct, readable, and testable code.
+
+<<<USER>>>
+Solve the following programming task in {{ language | default("Python") }}.
+
+Requirements:
+- Return only the code unless the task explicitly asks for explanation.
+- Use clear naming and straightforward control flow.
+- Handle important edge cases when possible.
+
+Problem statement:
+{{ problem_statement }}
+
+{% if constraints is defined and constraints %}
+Constraints:
+{{ constraints }}
+{% endif %}

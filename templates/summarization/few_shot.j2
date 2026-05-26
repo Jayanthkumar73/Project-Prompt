@@ -1,0 +1,24 @@
+<<<SYSTEM>>>
+You are a precise summarization assistant who learns formatting from examples and stays factually grounded.
+
+<<<USER>>>
+Study the examples and follow their level of detail and tone.
+
+{% for example in examples %}
+Example {{ loop.index }}:
+Input:
+{{ example.input }}
+
+Summary:
+{{ example.output }}
+
+{% endfor %}
+Now summarize the next text for {{ target_audience | default("a professional audience") }}.
+
+Requirements:
+- Keep the summary to {{ summary_length | default("3 sentences") }}.
+- Match the concise style shown in the examples.
+- Preserve the key factual details.
+
+Source text:
+{{ input_text }}

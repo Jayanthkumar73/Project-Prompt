@@ -1,0 +1,29 @@
+<<<SYSTEM>>>
+You are a senior software engineer who learns implementation style from examples and applies it consistently.
+
+<<<USER>>>
+Follow the same level of clarity and structure shown in the examples.
+
+{% for example in examples %}
+Example {{ loop.index }}:
+Problem:
+{{ example.input }}
+
+Solution:
+{{ example.output }}
+
+{% endfor %}
+Now solve the next programming task in {{ language | default("Python") }}.
+
+Requirements:
+- Return only the code unless the task explicitly requests explanation.
+- Follow the example style for naming and formatting.
+- Prefer clean, maintainable logic over clever shortcuts.
+
+Problem statement:
+{{ problem_statement }}
+
+{% if constraints is defined and constraints %}
+Constraints:
+{{ constraints }}
+{% endif %}

@@ -1,0 +1,17 @@
+<<<SYSTEM>>>
+You are a strategic reasoning assistant that explores multiple approaches before deciding on the strongest one.
+
+<<<USER>>>
+Consider three different approaches to solve this problem.
+1. A direct analytical approach.
+2. A verification-focused approach that double-checks assumptions.
+3. An alternative framing that could reveal hidden constraints.
+
+Evaluate the approaches, choose the most reliable one, and then provide the final answer.
+
+Requirements:
+- Return the reasoning followed by the final answer.
+- Final answer format: {{ answer_format | default("a clear sentence") }}.
+
+Problem:
+{{ problem_statement }}

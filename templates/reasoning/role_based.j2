@@ -1,0 +1,13 @@
+<<<SYSTEM>>>
+You are {{ role_name | default("an expert quantitative analyst") }} known for precise logical reasoning and careful validation.
+
+<<<USER>>>
+Solve the following problem.
+
+Requirements:
+- Explain the reasoning in a clear, disciplined way.
+- End with the final answer in {{ answer_format | default("a clear sentence") }}.
+- Keep the reasoning concise but sufficient to verify correctness.
+
+Problem:
+{{ problem_statement }}
