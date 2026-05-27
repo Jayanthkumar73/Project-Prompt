@@ -9,7 +9,7 @@ import json
 import os
 from typing import Dict, Any
 
-import google.generativeai as genai
+from ..execution.llm_client import GeminiClient
 
 
 JUDGE_PROMPT = """
@@ -40,31 +40,44 @@ Return ONLY valid JSON:
 """
 
 
-def _configure_genai():
-	key = os.getenv("GEMINI_API_KEY")
-	if not key:
-		raise RuntimeError("GEMINI_API_KEY not set in environment")
-	genai.configure(api_key=key)
-	return genai
-
-
-def evaluate_with_llm(reference: str, generated: str, model: str = "gemini-3.1-pro") -> Dict[str, Any]:
+def evaluate_with_llm(reference: str, generated: str, model: str = "gemini-2.0-flash") -> Dict[str, Any]:
 	"""Call Gemini to evaluate and return parsed JSON scores.
 
 	Falls back to zeroed scores on any failure.
 	"""
 
-	gen = _configure_genai()
+	client = GeminiClient()
 
 	prompt = JUDGE_PROMPT.format(reference=reference, generated=generated)
+	messages = [{"role": "user", "content": prompt}]
 
 	try:
-		# Use simple generate API; adjust per installed SDK version
-		response = gen.generate(prompt=prompt, model=model)
-		text = getattr(response, "text", None) or response.output[0].content[0].text
+		# Use GeminiClient to send messages
+		response = client.send_messages(messages, model=model)
+		
+		# In google.genai, response is a GenerateContentResponse
+		# We extract text
+		if hasattr(response, "text"):
+			text = response.text
+		elif hasattr(response, "candidates") and response.candidates:
+			# Older or different candidate format
+			text = response.candidates[0].content.parts[0].text
+		else:
+			# fallback
+			text = str(response)
+
+		# Clean potential markdown code blocks if the model wrapped JSON
+		text = text.strip()
+		if text.startswith("```json"):
+			text = text[7:]
+		if text.endswith("```"):
+			text = text[:-3]
+		text = text.strip()
+
 		result = json.loads(text)
 		return result
-	except Exception:
+	except Exception as e:
+		print(f"LLM Judge Error: {e}")
 		return {
 			"accuracy": 0,
 			"coherence": 0,
