@@ -1,4 +1,4 @@
-﻿"""LLM-as-judge scoring pipeline using Gemini (google-generativeai).
+"""LLM-as-judge scoring pipeline using Gemini (google-generativeai).
 
 Exposes `evaluate_with_llm(reference, generated)` which returns a dict with
 accuracy, coherence, completeness, and overall scores. Returns safe defaults
@@ -52,28 +52,9 @@ def evaluate_with_llm(reference: str, generated: str, model: str = "gemini-2.0-f
 	messages = [{"role": "user", "content": prompt}]
 
 	try:
-		# Use GeminiClient to send messages
-		response = client.send_messages(messages, model=model)
-		
-		# In google.genai, response is a GenerateContentResponse
-		# We extract text
-		if hasattr(response, "text"):
-			text = response.text
-		elif hasattr(response, "candidates") and response.candidates:
-			# Older or different candidate format
-			text = response.candidates[0].content.parts[0].text
-		else:
-			# fallback
-			text = str(response)
-
-		# Clean potential markdown code blocks if the model wrapped JSON
-		text = text.strip()
-		if text.startswith("```json"):
-			text = text[7:]
-		if text.endswith("```"):
-			text = text[:-3]
-		text = text.strip()
-
+		model_client = gen.GenerativeModel(model_name=model)
+		response = model_client.generate_content(prompt)
+		text = getattr(response, "text", None) or response.output[0].content[0].text
 		result = json.loads(text)
 		return result
 	except Exception as e:
