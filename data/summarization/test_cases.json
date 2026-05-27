@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+     
+    "input": "Artificial Intelligence is rapidly transforming the healthcare industry by improving diagnostics, automating administrative tasks, and supporting doctors in decision-making. Hospitals are increasingly using AI-powered systems to analyze patient records, detect diseases early, and recommend personalized treatment plans. AI is also improving medical imaging by enabling faster and more accurate detection of conditions such as cancer and heart disease. Additionally, AI-driven chatbots are being used for patient triage and mental health support, reducing the burden on healthcare professionals.",
+    "reference": "Artificial Intelligence is improving healthcare through diagnostics, medical imaging, and hospital automation. AI systems help doctors detect diseases early, recommend personalized treatments, and support patient triage through chatbots."
+  },
+  {
+    "id": 2,
+     
+    "input": "Climate change is causing rising temperatures, melting glaciers, and extreme weather conditions across the world. Scientists warn that global temperatures could rise by 1.5 degrees Celsius above pre-industrial levels within the next decade. Governments and international organizations are investing heavily in renewable energy sources such as solar and wind power to reduce carbon emissions. The Paris Agreement commits nations to limiting global warming, though progress remains uneven across countries.",
+    "reference": "Climate change is driving rising temperatures and extreme weather. Governments are investing in renewable energy and international agreements to limit warming and reduce carbon emissions."
+  },
+  {
+    "id": 3,
+     
+    "input": "Online education became extremely popular after the COVID-19 pandemic forced schools and universities to close. Institutions adopted hybrid learning models that combine virtual classes with in-person practical sessions. Online learning platforms like Coursera, edX, and Khan Academy saw massive growth in enrollments. While online learning improves accessibility for students in remote areas, challenges such as poor internet connectivity, reduced student engagement, and the lack of hands-on experience continue to limit its effectiveness.",
+    "reference": "Online education expanded after the pandemic through hybrid models and digital platforms. While accessibility improved, challenges like poor connectivity and lower student engagement still limit its effectiveness."
+  },
+  {
+    "id": 4,
+     
+    "input": "Electric vehicles are becoming more common as countries attempt to reduce pollution and dependence on fossil fuels. Major car manufacturers such as Tesla, General Motors, and Volkswagen are investing billions of dollars into battery technology and charging infrastructure. Governments in Europe, the United States, and China are offering subsidies and tax incentives to encourage EV adoption. Analysts predict that by 2035, electric vehicles could account for over 50 percent of all new car sales globally.",
+    "reference": "Electric vehicles are gaining popularity due to environmental concerns and government incentives. Companies are investing in batteries and charging infrastructure, with analysts predicting EVs could make up over half of new car sales by 2035."
+  },
+  {
+    "id": 5,
+     
+    "input": "Cybersecurity threats are increasing as businesses and governments rely more heavily on digital systems and cloud computing. Cybercriminals use techniques such as phishing attacks, ransomware, and data breaches to steal sensitive information and disrupt operations. High-profile incidents have targeted hospitals, financial institutions, and critical infrastructure. Organizations are responding by implementing stronger security measures including end-to-end encryption, multi-factor authentication, zero-trust architecture, and regular employee security training.",
+    "reference": "Cybersecurity threats are rising with greater digital dependency. Organizations are using encryption, multi-factor authentication, and zero-trust architecture to protect against phishing, ransomware, and data breaches."
+  },
+  {
+    "id": 6,
+     
+    "input": "Space exploration has advanced significantly with private companies entering the industry alongside government agencies. Organizations such as SpaceX, Blue Origin, and Virgin Galactic are developing reusable rockets and spacecraft to reduce the cost of space travel. NASA and ESA are pursuing missions to the Moon under the Artemis program. Scientists and space agencies believe that future missions to Mars could support permanent human settlement within the next two to three decades.",
+    "reference": "Private companies and space agencies are advancing space exploration through reusable rockets and lunar missions. Future Mars missions may support permanent human settlement within decades."
+  },
+  {
+    "id": 7,
+     
+    "input": "Renewable energy sources such as solar, wind, and hydroelectric power are becoming central to sustainable development strategies worldwide. The cost of solar panels has dropped by over 90 percent in the last decade, making solar energy one of the cheapest sources of electricity in history. Many countries are phasing out coal-fired power plants and setting ambitious targets to achieve carbon neutrality by 2050. International investments in clean energy technologies surpassed one trillion dollars in 2023 for the first time.",
+    "reference": "Renewable energy is central to sustainable development. Solar costs have dropped dramatically, and global investment in clean energy surpassed one trillion dollars in 2023 as countries target carbon neutrality by 2050."
+  },
+  {
+    "id": 8,
+     
+    "input": "Social media platforms have transformed communication by allowing people to share information instantly across the globe. Platforms such as Facebook, Instagram, Twitter, and TikTok have billions of active users. However, the spread of misinformation, deepfakes, and coordinated disinformation campaigns has raised serious concerns among policymakers and researchers. Regulatory bodies in Europe and the United States are pushing for stronger laws to hold platforms accountable for harmful content and to protect user privacy.",
+    "reference": "Social media has transformed global communication but faces growing concerns over misinformation, deepfakes, and privacy. Regulators are pushing for stronger laws to hold platforms accountable for harmful content."
+  },
+  {
+    "id": 9,
+     
+    "input": "Blockchain technology is being adopted in industries such as finance, healthcare, and supply chain management. The technology provides transparency, security, and decentralized record-keeping, making transactions more reliable and tamper-proof. Major banks and financial institutions are using blockchain for faster cross-border payments. In healthcare, blockchain is being explored to secure patient records and enable interoperability between hospital systems. Supply chain companies use blockchain to track goods in real time and reduce fraud.",
+    "reference": "Blockchain technology improves transparency and security across finance, healthcare, and supply chain industries through decentralized record-keeping, faster payments, and fraud reduction."
+  },
+  {
+    "id": 10,
+     
+    "input": "Remote work has become standard practice in many industries following the COVID-19 pandemic. Companies widely adopted collaboration tools such as Zoom, Slack, and Microsoft Teams to maintain productivity. Studies show that remote workers often report higher job satisfaction and better work-life balance, though challenges such as communication gaps, team coordination difficulties, and the blurring of professional and personal boundaries persist. Some organizations are now adopting hybrid work models that balance in-office and remote days.",
+    "reference": "Remote work grew rapidly after the pandemic using tools like Zoom and Slack. While employees value flexibility and report higher satisfaction, communication challenges persist, leading many firms to adopt hybrid work models."
+  },
+  {
+    "id": 11,
+     
+    "input": "Generative AI tools such as ChatGPT, Claude, and Gemini are being rapidly adopted in businesses and educational institutions. These models can write code, draft documents, answer complex questions, and generate creative content. Businesses are using generative AI to automate customer service, marketing, and software development workflows. Educators and policymakers are debating how to integrate these tools responsibly while addressing concerns about academic dishonesty, bias, and the spread of AI-generated misinformation.",
+    "reference": "Generative AI tools are being adopted in business and education for tasks like coding, writing, and customer service. Policymakers and educators are debating responsible use amid concerns about bias, misinformation, and academic integrity."
+  },
+  {
+    "id": 12,
+     
+    "input": "The global mental health crisis has worsened in the years following the COVID-19 pandemic. Rates of anxiety, depression, and burnout have increased significantly among adults and young people. Mental health services are underfunded in many countries, leading to long waiting times and a shortage of qualified therapists. Digital mental health platforms and AI-powered therapy applications are emerging as supplementary solutions to address the growing demand, though concerns about privacy and clinical effectiveness remain.",
+    "reference": "Mental health issues have increased globally since the pandemic. Underfunded services and therapist shortages are driving the adoption of digital mental health platforms and AI therapy tools, despite privacy and effectiveness concerns."
+  },
+  {
+    "id": 13,
+     
+    "input": "5G technology is being deployed worldwide, promising significantly faster internet speeds, lower latency, and the ability to connect billions of devices simultaneously. Telecom companies are investing trillions globally in 5G infrastructure. The technology is expected to enable new applications including autonomous vehicles, smart cities, remote surgery, and advanced industrial automation. However, deployment is uneven, with rural and developing regions lagging behind urban areas in access to 5G networks.",
+    "reference": "5G is being deployed globally, enabling faster speeds and new applications like smart cities and autonomous vehicles. However, uneven deployment leaves rural and developing areas with limited access."
+  },
+  {
+    "id": 14,
+     
+    "input": "Food security has become a growing concern as climate change disrupts agricultural production and global supply chains remain fragile. Rising temperatures, droughts, and floods are reducing crop yields in vulnerable regions. The United Nations estimates that over 800 million people currently face chronic hunger. Governments and NGOs are investing in drought-resistant crops, precision agriculture technologies, and improved food distribution systems to address these challenges and reduce food waste.",
+    "reference": "Climate change and supply chain disruptions are threatening global food security, with over 800 million people facing chronic hunger. Governments and NGOs are investing in drought-resistant crops and precision agriculture to address the crisis."
+  },
+  {
+    "id": 15,
+     
+    "input": "The pharmaceutical industry is undergoing a major transformation driven by advances in biotechnology and artificial intelligence. AI is being used to accelerate drug discovery by analyzing vast datasets to identify potential drug candidates in weeks rather than years. mRNA technology, which proved effective in COVID-19 vaccines, is now being applied to develop treatments for cancer, HIV, and other diseases. Regulatory agencies are adapting approval processes to keep pace with the rapid development of new therapies.",
+    "reference": "AI and mRNA technology are transforming drug discovery and development. AI accelerates identification of drug candidates while mRNA is being applied beyond vaccines to treat cancer and HIV. Regulatory agencies are adapting to these rapid advances."
+  },
+  {
+    "id": 16,
+     
+    "input": "Water scarcity is emerging as one of the most serious environmental and humanitarian challenges of the 21st century. Over two billion people currently lack access to safe drinking water, and demand is expected to outpace supply in many regions by 2050. Climate change is intensifying droughts and disrupting traditional water sources such as glaciers and seasonal rainfall. Innovations such as desalination, water recycling, and smart irrigation systems are being deployed to address the crisis, but implementation remains slow in developing nations.",
+    "reference": "Water scarcity affects over two billion people and is worsening due to climate change. Innovations like desalination and smart irrigation are being developed to address the crisis, though adoption remains slow in developing countries."
+  },
+  {
+    "id": 17,
+     
+    "input": "The global economy is experiencing significant disruptions due to geopolitical tensions, inflation, and the lingering effects of the COVID-19 pandemic. Supply chain bottlenecks have driven up prices for goods ranging from semiconductors to food products. Central banks in major economies have raised interest rates aggressively to combat inflation, raising fears of recession. Developing countries face additional pressures including currency depreciation, rising debt burdens, and reduced foreign investment flows.",
+    "reference": "The global economy is struggling with inflation, supply chain disruptions, and post-pandemic recovery. Rising interest rates and geopolitical tensions are slowing growth, with developing economies facing heightened financial pressures."
+  },
+  {
+    "id": 18,
+     
+    "input": "Quantum computing represents one of the most revolutionary advances in computing technology. Unlike classical computers that use binary bits, quantum computers use quantum bits or qubits, which can exist in multiple states simultaneously. This enables them to solve complex optimization and simulation problems exponentially faster. Companies like IBM, Google, and startups like IonQ are racing to achieve practical quantum advantage. Applications are expected in drug discovery, cryptography, financial modeling, and materials science.",
+    "reference": "Quantum computing uses qubits to solve complex problems far faster than classical computers. IBM, Google, and startups are competing to achieve practical quantum advantage, with applications expected in medicine, cryptography, and finance."
+  },
+  {
+    "id": 19,
+     
+    "input": "Urbanization is accelerating globally, with more than 55 percent of the world's population already living in cities. By 2050, that figure is expected to rise to nearly 70 percent. Rapid urban growth creates challenges including housing shortages, traffic congestion, pollution, and strain on public services. Smart city initiatives are using IoT sensors, AI, and data analytics to improve urban planning, traffic management, energy usage, and public safety. Singapore, Amsterdam, and Songdo in South Korea are frequently cited as leading smart city examples.",
+    "reference": "Over half the world lives in cities, a share expected to reach 70 percent by 2050. Smart city technologies using IoT and AI are addressing urban challenges like congestion, housing, and pollution, with Singapore and Amsterdam as leading examples."
+  },
+  {
+    "id": 20,
+     
+    "input": "The rise of e-commerce has fundamentally changed retail by shifting consumer purchasing behavior from physical stores to online platforms. Amazon, Alibaba, and Shopify dominate the global e-commerce landscape. The COVID-19 pandemic accelerated this shift, with online sales growing by over 30 percent in 2020. Last-mile delivery has become a critical competitive factor, driving investment in drone delivery, autonomous vehicles, and same-day shipping infrastructure. Traditional brick-and-mortar retailers are struggling to compete and are investing in omnichannel strategies to survive.",
+    "reference": "E-commerce has transformed retail, with platforms like Amazon and Alibaba dominating. The pandemic accelerated online sales growth, while last-mile delivery innovations and omnichannel strategies are reshaping competition with traditional retailers."
+  }
+]

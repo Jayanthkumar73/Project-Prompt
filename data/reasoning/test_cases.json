@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+     
+    "input": "A train travels from City A to City B at 60 km/h and returns from City B to City A at 40 km/h. What is the average speed for the entire round trip?",
+    "reference": "Step 1: Let the one-way distance be D km.\nStep 2: Time for A to B = D / 60 hours.\nStep 3: Time for B to A = D / 40 hours.\nStep 4: Total distance = 2D.\nStep 5: Total time = D/60 + D/40 = 2D/120 + 3D/120 = 5D/120 = D/24.\nStep 6: Average speed = Total distance / Total time = 2D / (D/24) = 48 km/h.\nAnswer: The average speed for the round trip is 48 km/h."
+  },
+  {
+    "id": 2,
+    
+    "input": "A store sells apples and oranges. Apples cost 3 dollars each and oranges cost 2 dollars each. If a customer buys a total of 10 fruits and pays exactly 24 dollars, how many apples and how many oranges did they buy?",
+    "reference": "Step 1: Let the number of apples be A and oranges be O.\nStep 2: From the total fruit count: A + O = 10.\nStep 3: From the total cost: 3A + 2O = 24.\nStep 4: From equation 1: O = 10 - A.\nStep 5: Substitute into equation 2: 3A + 2(10 - A) = 24.\nStep 6: 3A + 20 - 2A = 24, so A = 4.\nStep 7: O = 10 - 4 = 6.\nAnswer: The customer bought 4 apples and 6 oranges."
+  },
+  {
+    "id": 3,
+     
+    "input": "In a class of 30 students, 18 play football, 15 play basketball, and 8 play both sports. How many students play neither football nor basketball?",
+    "reference": "Step 1: Use the inclusion-exclusion principle.\nStep 2: Students who play at least one sport = Students playing football + Students playing basketball - Students playing both.\nStep 3: At least one sport = 18 + 15 - 8 = 25.\nStep 4: Students who play neither = Total students - Students playing at least one sport.\nStep 5: Neither = 30 - 25 = 5.\nAnswer: 5 students play neither football nor basketball."
+  },
+  {
+    "id": 4,
+     
+    "input": "A tank can be filled by pipe A in 4 hours and by pipe B in 6 hours. If both pipes are opened together, how long will it take to fill the tank?",
+    "reference": "Step 1: Pipe A fills 1/4 of the tank per hour.\nStep 2: Pipe B fills 1/6 of the tank per hour.\nStep 3: Together, they fill 1/4 + 1/6 = 3/12 + 2/12 = 5/12 of the tank per hour.\nStep 4: Time to fill the full tank = 1 / (5/12) = 12/5 = 2.4 hours.\nAnswer: The tank will be filled in 2.4 hours (2 hours and 24 minutes) when both pipes are open."
+  },
+  {
+    "id": 5,
+     
+    "input": "Alice is twice as old as Bob was when Alice was as old as Bob is now. If the sum of their current ages is 49, how old are Alice and Bob?",
+    "reference": "Step 1: Let Bob's current age be B and Alice's current age be A.\nStep 2: The age difference is A - B.\nStep 3: When Alice was Bob's current age (B), Bob was B - (A - B) = 2B - A.\nStep 4: Alice is now twice that age: A = 2(2B - A).\nStep 5: A = 4B - 2A, so 3A = 4B, giving A = 4B/3.\nStep 6: Use A + B = 49: 4B/3 + B = 49, so 7B/3 = 49, giving B = 21.\nStep 7: A = 49 - 21 = 28.\nAnswer: Alice is 28 years old and Bob is 21 years old."
+  },
+  {
+    "id": 6,
+     
+    "input": "A rectangle has a perimeter of 54 cm. Its length is 3 cm more than twice its width. What are the dimensions of the rectangle?",
+    "reference": "Step 1: Let the width be W cm and the length be L cm.\nStep 2: From the length condition: L = 2W + 3.\nStep 3: The perimeter formula: 2(L + W) = 54, so L + W = 27.\nStep 4: Substitute L: (2W + 3) + W = 27.\nStep 5: 3W + 3 = 27, so 3W = 24, giving W = 8.\nStep 6: L = 2(8) + 3 = 19.\nAnswer: The width is 8 cm and the length is 19 cm."
+  },
+  {
+    "id": 7,
+     
+    "input": "If all Bloops are Razzies and all Razzies are Lazzies, are all Bloops definitely Lazzies? Are all Lazzies definitely Bloops? Explain your reasoning.",
+    "reference": "Step 1: Analyze the first statement: All Bloops are Razzies. This means the set of Bloops is a subset of the set of Razzies.\nStep 2: Analyze the second statement: All Razzies are Lazzies. This means the set of Razzies is a subset of the set of Lazzies.\nStep 3: By transitivity of subsets, if Bloops are a subset of Razzies and Razzies are a subset of Lazzies, then Bloops are a subset of Lazzies.\nStep 4: Therefore, all Bloops are definitely Lazzies. TRUE.\nStep 5: However, being a Lazzie does not require being a Razzie or a Bloop. Lazzies is a larger set.\nStep 6: Therefore, not all Lazzies are necessarily Bloops. FALSE.\nAnswer: Yes, all Bloops are definitely Lazzies. No, not all Lazzies are necessarily Bloops."
+  },
+  {
+    "id": 8,
+     
+    "input": "A shopkeeper marks a product 40% above its cost price and then offers a 20% discount on the marked price. What is the percentage profit or loss on the cost price?",
+    "reference": "Step 1: Let the cost price be 100 units.\nStep 2: Marked price = 100 + 40% of 100 = 140.\nStep 3: Discount = 20% of 140 = 28.\nStep 4: Selling price = 140 - 28 = 112.\nStep 5: Profit = Selling price - Cost price = 112 - 100 = 12.\nStep 6: Percentage profit = (12 / 100) * 100 = 12%.\nAnswer: The shopkeeper makes a 12% profit on the cost price."
+  },
+  {
+    "id": 9,
+     
+    "input": "Three friends — Ava, Ben, and Cara — each have a different pet: a cat, a dog, and a fish. Ava does not have the cat. Ben does not have the dog. The person with the fish is not Ava. Who has which pet?",
+    "reference": "Step 1: List the possibilities: Ava, Ben, Cara each have one of cat, dog, fish.\nStep 2: Clue 1 — Ava does not have the cat. So Ava has dog or fish.\nStep 3: Clue 3 — Ava does not have the fish. Combined with clue 1, Ava must have the dog.\nStep 4: Since Ava has the dog, Ben does not have the dog (clue 2 also confirms). Ben has cat or fish.\nStep 5: Since Ava has the dog, the cat and fish are left for Ben and Cara.\nStep 6: Clue 2 says Ben does not have the dog — already satisfied. Ben can have cat or fish.\nStep 7: No further constraint eliminates cat for Ben, so Ben has the cat and Cara has the fish.\nAnswer: Ava has the dog, Ben has the cat, and Cara has the fish."
+  },
+  {
+    "id": 10,
+     
+    "input": "A bacteria culture doubles every 3 hours. If the culture starts with 500 bacteria, how many bacteria will there be after 24 hours?",
+    "reference": "Step 1: Identify the doubling period: every 3 hours.\nStep 2: Number of doubling periods in 24 hours = 24 / 3 = 8.\nStep 3: Formula: Final count = Initial count * 2^(number of doublings).\nStep 4: Final count = 500 * 2^8 = 500 * 256 = 128,000.\nAnswer: After 24 hours, there will be 128,000 bacteria."
+  },
+  {
+    "id": 11,
+     
+    "input": "A bag contains 5 red balls, 3 blue balls, and 2 green balls. If one ball is drawn at random, what is the probability that it is either red or green?",
+    "reference": "Step 1: Count total balls: 5 + 3 + 2 = 10.\nStep 2: Count favorable outcomes (red or green): 5 + 2 = 7.\nStep 3: Probability = Favorable outcomes / Total outcomes = 7 / 10.\nAnswer: The probability of drawing a red or green ball is 7/10 or 0.7 (70%)."
+  },
+  {
+    "id": 12,
+     
+    "input": "If the day after tomorrow is Wednesday, what day is the day before yesterday?",
+    "reference": "Step 1: The day after tomorrow is Wednesday.\nStep 2: Tomorrow is one day before Wednesday, which is Tuesday.\nStep 3: Today is one day before Tuesday, which is Monday.\nStep 4: Yesterday is one day before Monday, which is Sunday.\nStep 5: The day before yesterday is one day before Sunday, which is Saturday.\nAnswer: The day before yesterday is Saturday."
+  },
+  {
+    "id": 13,
+     
+    "input": "A car depreciates in value by 15% each year. If the car is currently worth 20,000 dollars, what will it be worth after 3 years? Round to the nearest dollar.",
+    "reference": "Step 1: Each year the car retains 100% - 15% = 85% of its value.\nStep 2: After year 1: 20,000 * 0.85 = 17,000.\nStep 3: After year 2: 17,000 * 0.85 = 14,450.\nStep 4: After year 3: 14,450 * 0.85 = 12,282.50.\nStep 5: Alternatively, use the formula: 20,000 * (0.85)^3 = 20,000 * 0.614125 = 12,282.50.\nAnswer: After 3 years, the car will be worth approximately 12,283 dollars."
+  },
+  {
+    "id": 14,
+     
+    "input": "Four people — W, X, Y, and Z — need to cross a bridge at night. They have one torch. The bridge can hold at most two people at a time and the torch must always be carried when crossing. W takes 1 minute, X takes 2 minutes, Y takes 5 minutes, and Z takes 10 minutes. When two people cross together, they go at the slower person's pace. What is the minimum time to get all four across?",
+    "reference": "Step 1: The optimal strategy pairs slow people together.\nStep 2: Move 1 — W and X cross together: 2 minutes. Total: 2 min.\nStep 3: Move 2 — W returns with torch: 1 minute. Total: 3 min.\nStep 4: Move 3 — Y and Z cross together: 10 minutes. Total: 13 min.\nStep 5: Move 4 — X returns with torch: 2 minutes. Total: 15 min.\nStep 6: Move 5 — W and X cross together: 2 minutes. Total: 17 min.\nAnswer: The minimum time to get all four people across the bridge is 17 minutes."
+  },
+  {
+    "id": 15,
+     
+    "input": "A factory produces 450 units in 5 days using 9 workers. How many units will 6 workers produce in 8 days, assuming the same productivity per worker per day?",
+    "reference": "Step 1: Find daily productivity per worker. Total units = 450, days = 5, workers = 9.\nStep 2: Units per worker per day = 450 / (5 * 9) = 450 / 45 = 10 units.\nStep 3: For 6 workers over 8 days: units = 10 * 6 * 8 = 480.\nAnswer: 6 workers will produce 480 units in 8 days."
+  },
+  {
+    "id": 16,
+     
+    "input": "A jar contains coins: 10 pennies (1 cent), 5 nickels (5 cents), 4 dimes (10 cents), and 2 quarters (25 cents). What percentage of the total monetary value do the quarters represent? Round to one decimal place.",
+    "reference": "Step 1: Calculate value of each coin type.\nStep 2: Pennies: 10 * 1 = 10 cents.\nStep 3: Nickels: 5 * 5 = 25 cents.\nStep 4: Dimes: 4 * 10 = 40 cents.\nStep 5: Quarters: 2 * 25 = 50 cents.\nStep 6: Total value = 10 + 25 + 40 + 50 = 125 cents.\nStep 7: Percentage for quarters = (50 / 125) * 100 = 40.0%.\nAnswer: The quarters represent 40.0% of the total monetary value."
+  },
+  {
+    "id": 17,
+     
+    "input": "If you rearrange the letters of the word SILENT, you can form another common English word. What is that word and what is your reasoning?",
+    "reference": "Step 1: List the letters in SILENT: S, I, L, E, N, T.\nStep 2: Try different arrangements of these 6 letters looking for a valid English word.\nStep 3: Rearranging: L, I, S, T, E, N — check if LISTEN is a word. Yes, LISTEN is a common English word.\nStep 4: Verify both words use the same letters: SILENT = S,I,L,E,N,T and LISTEN = L,I,S,T,E,N. Same letters confirmed.\nAnswer: The word is LISTEN. It is an anagram of SILENT using the same letters: S, I, L, E, N, T."
+  },
+  {
+    "id": 18,
+     
+    "input": "Two candles of equal length are lit at the same time. Candle A burns completely in 4 hours and Candle B burns completely in 6 hours. After how many hours will Candle A be exactly half the length of Candle B?",
+    "reference": "Step 1: Let the initial length of each candle be 1 unit.\nStep 2: Candle A burns at rate 1/4 per hour. After t hours, length of A = 1 - t/4.\nStep 3: Candle B burns at rate 1/6 per hour. After t hours, length of B = 1 - t/6.\nStep 4: Set up the equation: A = (1/2) * B, so (1 - t/4) = (1/2)(1 - t/6).\nStep 5: 1 - t/4 = 1/2 - t/12.\nStep 6: Multiply through by 12: 12 - 3t = 6 - t.\nStep 7: 6 = 2t, so t = 3.\nAnswer: After 3 hours, Candle A will be exactly half the length of Candle B."
+  },
+  {
+    "id": 19,
+     
+    "input": "There are 5 houses in a row, each painted a different color. The green house is immediately to the left of the white house. The red house is in the middle. The blue house is to the left of the red house. What is the order of the houses from left to right if the yellow house is also present?",
+    "reference": "Step 1: There are 5 positions (1 to 5, left to right) and 5 colors: red, green, white, blue, yellow.\nStep 2: Red is in the middle, so red is in position 3.\nStep 3: Blue is to the left of red, so blue is in position 1 or 2.\nStep 4: Green is immediately to the left of white, so they are a consecutive pair (green, white).\nStep 5: Positions 4 and 5 are available for non-red houses. Green-white pair fits in positions 4-5.\nStep 6: With red at 3, green at 4, white at 5, the remaining positions 1 and 2 are for blue and yellow.\nStep 7: Blue is to the left of red (position 3), so blue can be 1 or 2. Yellow takes the other spot.\nStep 8: No further constraint distinguishes 1 and 2, but blue must be left of red — both position 1 and 2 satisfy this.\nStep 9: Using the constraint that all positions are uniquely filled: blue at 1, yellow at 2 is one valid solution.\nAnswer: The order from left to right is: Blue, Yellow, Red, Green, White."
+  },
+  {
+    "id": 20,
+     
+    "input": "A company's revenue grew by 20% in the first year and then declined by 20% in the second year. Is the revenue after two years the same as the initial revenue? Explain with a calculation.",
+    "reference": "Step 1: Let the initial revenue be 100 units.\nStep 2: After 20% growth in year 1: 100 * 1.20 = 120.\nStep 3: After 20% decline in year 2: 120 * 0.80 = 96.\nStep 4: The final revenue is 96, not 100.\nStep 5: The net change is 96 - 100 = -4, which represents a 4% overall loss.\nStep 6: This happens because the percentage increase and decrease are applied to different base values. The 20% decline is applied to the larger post-growth value.\nAnswer: No, the revenue is NOT the same. It is 4% lower than the initial value, ending at 96 out of the original 100."
+  }
+]
