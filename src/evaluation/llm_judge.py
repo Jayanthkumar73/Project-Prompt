@@ -75,6 +75,9 @@ def evaluate_with_llm(reference: str, generated: str, model: str = "llama-3.3-70
 			text = text[:-3]
 		text = text.strip()
 
+		model_client = gen.GenerativeModel(model_name=model)
+		response = model_client.generate_content(prompt)
+		text = getattr(response, "text", None) or response.output[0].content[0].text
 		result = json.loads(text)
 		return result
 	except Exception as e:
