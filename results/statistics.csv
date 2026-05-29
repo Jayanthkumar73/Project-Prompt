@@ -1,0 +1,7 @@
+Task,Technique,Metric,Mean,Std,Variance,CI Lower,CI Upper,p-value
+summarization,zero_shot,bleu,0.0826,0.0757,0.00573,0.0631,0.1022,N/A
+summarization,zero_shot,rouge_l,0.3684,0.0821,0.00674,0.3472,0.3896,N/A
+summarization,zero_shot,bertscore,0.8811,0.0144,0.000207,0.8773,0.8848,N/A
+summarization,few_shot,bleu,0.0997,0.0653,0.004264,0.0776,0.1218,N/A
+summarization,few_shot,rouge_l,0.3797,0.0669,0.004476,0.357,0.4023,N/A
+summarization,few_shot,bertscore,0.8799,0.0115,0.000132,0.876,0.8838,N/A

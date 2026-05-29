@@ -1,0 +1,48 @@
+{
+  "summarization::zero_shot": {
+    "task": "summarization",
+    "technique": "zero_shot",
+    "n_runs": 60,
+    "bleu": {
+      "mean": 0.0826,
+      "std": 0.0757,
+      "ci_low": 0.0631,
+      "ci_high": 0.1022
+    },
+    "rouge_l": {
+      "mean": 0.3684,
+      "std": 0.0821,
+      "ci_low": 0.3472,
+      "ci_high": 0.3896
+    },
+    "bertscore": {
+      "mean": 0.8811,
+      "std": 0.0144,
+      "ci_low": 0.8773,
+      "ci_high": 0.8848
+    }
+  },
+  "summarization::few_shot": {
+    "task": "summarization",
+    "technique": "few_shot",
+    "n_runs": 36,
+    "bleu": {
+      "mean": 0.0997,
+      "std": 0.0653,
+      "ci_low": 0.0776,
+      "ci_high": 0.1218
+    },
+    "rouge_l": {
+      "mean": 0.3797,
+      "std": 0.0669,
+      "ci_low": 0.357,
+      "ci_high": 0.4023
+    },
+    "bertscore": {
+      "mean": 0.8799,
+      "std": 0.0115,
+      "ci_low": 0.876,
+      "ci_high": 0.8838
+    }
+  }
+}

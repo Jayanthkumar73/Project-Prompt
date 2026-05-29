@@ -1,4 +1,4 @@
-﻿"""Experiment orchestration and raw response persistence.
+"""Experiment orchestration and raw response persistence.
 
 This runner loads a dataset JSON file (array of cases), renders prompts via the
 prompting layer, calls the LLM client, evaluates metrics, and persists per-run
@@ -28,10 +28,10 @@ RESULTS_RAW = Path("results/raw_responses.jsonl")
 RESULTS_SCORES = Path("results/scores.csv")
 
 
-def run_experiment(dataset_path: Path | str, task: str, technique: str, repeats: int = 3) -> None:
+def run_experiment(dataset_path: Path | str, task: str, technique: str, repeats: int = 7) -> None:
 	dataset_path = Path(dataset_path)
 	with dataset_path.open("r", encoding="utf-8") as fh:
-		cases = json.load(fh)
+		cases = json.load(fh)[:3]
 
 	rows: list[dict[str, Any]] = []
 
@@ -45,16 +45,32 @@ def run_experiment(dataset_path: Path | str, task: str, technique: str, repeats:
 			run_id = str(uuid.uuid4())
 			ts = datetime.utcnow().isoformat() + "Z"
 
+			# Build examples from other cases to avoid undefined template variables in few_shot
+			examples = []
+			for c in cases:
+				if c.get("id") != case_id and len(examples) < 2:
+					examples.append({"input": c.get("input"), "output": c.get("reference")})
+
+			kwargs = {
+				"input_text": input_payload,
+				"problem_statement": input_payload,
+				"question": input_payload,
+				"constraints": case.get("constraints", "Code should be clean and readable."),
+				"examples": examples
+			}
+
 			# Render prompt using prompt_renderer
-			rendered = render_prompt(task=task, technique=technique, input_text=input_payload)
+			rendered = render_prompt(task=task, technique=technique, **kwargs)
 			messages = rendered.as_messages()
 
-			# Call provider and get raw response (kept unchanged)
+			# Call provider and get raw response
 			raw_response = send_messages(messages)
 
 			# Extract generated text conservatively
 			try:
-				if hasattr(raw_response, "text"):
+				if hasattr(raw_response, "choices") and raw_response.choices:
+					generated = raw_response.choices[0].message.content
+				elif hasattr(raw_response, "text"):
 					generated = raw_response.text
 				elif hasattr(raw_response, "candidates") and raw_response.candidates:
 					generated = raw_response.candidates[0].content.parts[0].text
@@ -68,9 +84,9 @@ def run_experiment(dataset_path: Path | str, task: str, technique: str, repeats:
 			metrics = evaluate_response(reference=reference, generated=generated)
 			judge = evaluate_with_llm(reference=reference, generated=generated)
 
-			# Free tier rate limiting: 1 request every 12 seconds to be safe
-			# Each repeat makes 2 LLM calls (Generation + Judge)
-			time.sleep(12)
+			# Grok rate limiting: 30 requests per minute (2 seconds per request).
+			# Each repeat makes 2 calls (gen + judge), so 4 seconds covers it comfortably. Fast!
+			time.sleep(4)
 
 			record = {
 				"run_id": run_id,
@@ -109,7 +125,7 @@ def run_experiment(dataset_path: Path | str, task: str, technique: str, repeats:
 	df.to_csv(RESULTS_SCORES, index=False)
 
 
-def run_all_techniques(dataset_path: Path | str, task: str, repeats: int = 3) -> None:
+def run_all_techniques(dataset_path: Path | str, task: str, repeats: int = 7) -> None:
 	"""Runs all supported prompt techniques for a given task and dataset."""
 	from src.prompting.prompt_catalog import SUPPORTED_TECHNIQUES
 	
@@ -118,10 +134,11 @@ def run_all_techniques(dataset_path: Path | str, task: str, repeats: int = 3) ->
 		run_experiment(dataset_path, task, technique, repeats)
 
 def load_raw_results(path: Path | str = RESULTS_RAW):
-	return list(read_jsonl(Path(path)))
+        return list(read_jsonl(Path(path)))
 
 
 if __name__ == "__main__":
-	# Example invocation: run against summarization test cases with 3 repeats
-	run_experiment("data/summarization/test_cases.json", task="summarization", technique="zero_shot", repeats=3)
-
+        techniques = ["chain_of_thought", "role_based", "tree_of_thought", "structured_output"]
+        for t in ["summarization", "code_generation", "reasoning"]:
+                for tech in techniques:
+                        run_experiment(f"data/{t}/test_cases.json", task=t, technique=tech, repeats=3)

@@ -9,7 +9,7 @@ import json
 import os
 from typing import Dict, Any
 
-from ..execution.llm_client import GeminiClient
+from ..execution.llm_client import GroqClient
 
 
 JUDGE_PROMPT = """
@@ -40,24 +40,25 @@ Return ONLY valid JSON:
 """
 
 
-def evaluate_with_llm(reference: str, generated: str, model: str = "gemini-2.0-flash") -> Dict[str, Any]:
-	"""Call Gemini to evaluate and return parsed JSON scores.
+def evaluate_with_llm(reference: str, generated: str, model: str = "llama-3.3-70b-versatile") -> Dict[str, Any]:
+	"""Call Groq to evaluate and return parsed JSON scores.
 
 	Falls back to zeroed scores on any failure.
 	"""
 
-	client = GeminiClient()
+	client = GroqClient()
 
 	prompt = JUDGE_PROMPT.format(reference=reference, generated=generated)
 	messages = [{"role": "user", "content": prompt}]
 
 	try:
-		# Use GeminiClient to send messages
+		# Use GroqClient to send messages
 		response = client.send_messages(messages, model=model)
 		
-		# In google.genai, response is a GenerateContentResponse
-		# We extract text
-		if hasattr(response, "text"):
+		# In openai structure, response text is here
+		if hasattr(response, "choices") and response.choices:
+			text = response.choices[0].message.content
+		elif hasattr(response, "text"):
 			text = response.text
 		elif hasattr(response, "candidates") and response.candidates:
 			# Older or different candidate format

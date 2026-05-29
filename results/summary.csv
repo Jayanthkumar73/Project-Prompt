@@ -1,0 +1,3 @@
+task,technique,n_runs,bleu_mean,bleu_std,bleu_ci_low,bleu_ci_high,rouge_mean,rouge_std,rouge_ci_low,rouge_ci_high,bertscore_mean,bertscore_std,bertscore_ci_low,bertscore_ci_high
+summarization,zero_shot,60,0.0826,0.0757,0.0631,0.1022,0.3684,0.0821,0.3472,0.3896,0.8811,0.0144,0.8773,0.8848
+summarization,few_shot,36,0.0997,0.0653,0.0776,0.1218,0.3797,0.0669,0.357,0.4023,0.8799,0.0115,0.876,0.8838

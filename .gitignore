@@ -12,7 +12,7 @@ venv/
 !.env.example
 
 # Artifacts
-results/*
+
 !results/raw/
 !results/raw/.gitkeep
 !results/processed/
